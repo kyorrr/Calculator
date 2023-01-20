@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.event.*;
 
+import static java.lang.Double.parseDouble;
+
 public class MyCalculator {
     private JPanel Calculator;
     private JTextField txtDisplay;
@@ -98,7 +100,7 @@ public class MyCalculator {
         a00Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                a = Double.parseDouble(txtDisplay.getText());
+                a = parseDouble(txtDisplay.getText());
                 double c = (a*a);
                 txtDisplay.setText(String.valueOf(c));
             }
@@ -120,7 +122,7 @@ public class MyCalculator {
         button16.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                a = Double.parseDouble(txtDisplay.getText());
+                a = parseDouble(txtDisplay.getText());
                 String binary = Integer.toBinaryString((int) a);
                 txtDisplay.setText(binary);
             }
@@ -137,7 +139,7 @@ public class MyCalculator {
         button11.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                a = Double.parseDouble(txtDisplay.getText());
+                a = parseDouble(txtDisplay.getText());
                 op = "+";
                 txtDisplay.setText("");
             }
@@ -145,7 +147,7 @@ public class MyCalculator {
         button2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                a = Double.parseDouble(txtDisplay.getText());
+                a = parseDouble(txtDisplay.getText());
                 op = "-";
                 txtDisplay.setText("");
             }
@@ -153,7 +155,7 @@ public class MyCalculator {
         button3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                a = Double.parseDouble(txtDisplay.getText());
+                a = parseDouble(txtDisplay.getText());
                 op = "*";
                 txtDisplay.setText("");
             }
@@ -161,7 +163,7 @@ public class MyCalculator {
         button5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                a = Double.parseDouble(txtDisplay.getText());
+                a = parseDouble(txtDisplay.getText());
                 op = "/";
                 txtDisplay.setText("");
             }
@@ -182,7 +184,7 @@ public class MyCalculator {
         button4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                b = Double.parseDouble(txtDisplay.getText());
+                b = parseDouble(txtDisplay.getText());
 
                 switch (op) {
                     case "+" -> {
