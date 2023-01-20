@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.event.*;
+////
 
 import static java.lang.Double.parseDouble;
 
@@ -31,18 +32,8 @@ public class MyCalculator {
     String op;
 
     public MyCalculator() {
-        ACButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                txtDisplay.setText("");
-            }
-        });
-        a7Button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                txtDisplay.setText(txtDisplay.getText() + a7Button.getText());
-            }
-        });
+        ACButton.addActionListener(e -> txtDisplay.setText(""));
+        a7Button.addActionListener(e -> txtDisplay.setText(txtDisplay.getText() + a7Button.getText()));
         a8Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
